@@ -6,8 +6,6 @@ services:
 before_install:
   - docker build -t e1v1s/docker-react -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true e1v1s/docker-react npm run test
 
 deploy:
   provider:elasticbeanstalk
